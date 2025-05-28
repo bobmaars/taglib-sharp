@@ -1,0 +1,23 @@
+<Project>
+
+	<PropertyGroup>
+		<IsMac>$([MSBuild]::IsOSPlatform('OSX'))</IsMac>
+		<IsWindows>$([MSBuild]::IsOSPlatform('Windows'))</IsWindows>
+		<IsLinux>$([MSBuild]::IsOSPlatform('Linux'))</IsLinux>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<ReleaseVersion>2.5.0.0</ReleaseVersion>
+		<RepositoryUrl>https://github.com/mono/taglib-sharp</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+
+		<ExeTargetFrameworks>net472;net8.0;net9.0</ExeTargetFrameworks>
+		<LibTargetFrameworks>netstandard2.0;net8.0;net9.0</LibTargetFrameworks>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<ImplicitUsings>true</ImplicitUsings>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<LangVersion>latest</LangVersion>
+		<Deterministic>true</Deterministic>
+	</PropertyGroup>
+
+</Project>
